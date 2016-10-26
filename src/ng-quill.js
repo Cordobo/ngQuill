@@ -249,7 +249,7 @@ app.component('ngQuillEditor', {
             if (!editor) {
                 var deregister = $scope.$on('editorCreated', function () {
                     deregister();
-                    settingInitValues = true;
+                    // settingInitValues = true;
 
                     setChanges(changes);
                 });
