@@ -75,7 +75,11 @@ app.provider('ngQuillConfig', function () {
             cancel: 'Cancel',
             remove: 'Remove',
             insert: 'Insert',
-            preview: 'Preview'
+            preview: 'Preview',
+            cleanformat: 'Clean Formatting',
+            removeformat: 'Remove Formatting',
+            autoformat: 'Autoformat',
+            pagebreak: 'Insert Pagebreak'
         }
     };
 
@@ -456,6 +460,14 @@ app.run([
                         '<span class="ql-format-group" ng-if="$ctrl.shouldShow([\'list\', \'bullet\'])">' +
                             '<span title="{{$ctrl.dict.list}}" class="ql-format-button ql-list" ng-if="$ctrl.shouldShow([\'list\'])"></span>' +
                             '<span title="{{$ctrl.dict.bullet}}" class="ql-format-button ql-bullet" ng-if="$ctrl.shouldShow([\'bullet\'])"></span>' +
+                        '</span>' +
+                        '<span class="ql-format-group">' +
+                            '<span title="{{$ctrl.dict.pagebreak}}" class="ql-format-button ql-pagebreak"><i class="material-icons md-18">&#xE336;</i></span>' +
+                        '</span>' +
+                        '<span class="ql-format-group">' +
+                            '<span title="{{$ctrl.dict.autoformat}}" class="ql-format-button ql-autoformat"><i class="material-icons md-18">&#xE167;</i></span>' +
+                            '<span title="{{$ctrl.dict.cleanformat}}" class="ql-format-button ql-cleanformat"><i class="material-icons md-18">&#xE239;</i></span>' +
+                            '<span title="{{$ctrl.dict.removeformat}}" class="ql-format-button ql-removeformat"><i class="material-icons md-18">&#xE0B8;</i></span>' +
                         '</span>' +
                         '<span class="ql-format-group" ng-if="$ctrl.shouldShow([\'align\'])">' +
                             '<select title="{{$ctrl.dict.textAlign}}" class="ql-align">' +
